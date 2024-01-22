@@ -1,0 +1,34 @@
+﻿Public Class ApplicationHandler
+
+    Public Sub StartWord()
+        Try
+            Process.Start("C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE")
+        Catch ex As Exception
+            Console.WriteLine("Error occurred: " & ex.Message)
+        End Try
+    End Sub
+    
+    Public Sub StartExcel()
+        Try
+            Process.Start("C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE")
+        Catch ex As Exception
+            Console.WriteLine("Error occurred: " & ex.Message)
+        End Try
+    End Sub
+    
+    Public Sub StartOneNote()
+        Try
+            Process.Start("C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE")
+        Catch ex As Exception
+            Console.WriteLine("Error occurred: " & ex.Message)
+        End Try
+    End Sub
+    
+    Public Sub StartOutlook()
+        Try
+            Process.Start("C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE")
+        Catch ex As Exception
+            Console.WriteLine("Error occurred: " & ex.Message)
+        End Try
+    End Sub
+End Class
