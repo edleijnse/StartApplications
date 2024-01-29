@@ -4,7 +4,7 @@
         AddHandler Me.Loaded, AddressOf Window_Loaded
     End Sub
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-        ' Position the window at the bottom of the working area (just above the taskbar)
+        ' Position the window at the bottom of the working area (just above the taskbar )
         Me.Top = SystemParameters.WorkArea.Height - Me.Height
         Me.Left = (SystemParameters.WorkArea.Width - Me.Width) / 2
     End Sub
