@@ -8,6 +8,19 @@
         Me.Top = SystemParameters.WorkArea.Height - Me.Height
         Me.Left = (SystemParameters.WorkArea.Width - Me.Width) / 2
     End Sub
+    Private Sub Window_KeyDown(sender As Object, e As KeyEventArgs)
+        Select Case e.Key
+            Case Key.Left
+                Me.Left -= 200 'Moves the Window 10 units to the left.
+            Case Key.Right
+                Me.Left += 200 'Moves the Window 10 units to the right.
+            Case Key.Up
+                Me.Top -= 200 'Moves the Window 10 units up.
+            Case Key.Down
+                Me.Top += 200 'Moves the Window 10 units down.
+        End Select
+    End Sub
+  
 
     Private Sub ButtonClickHandler(sender As Object, e As RoutedEventArgs)
         Dim button As Button = CType(sender, Button)
