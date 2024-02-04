@@ -20,7 +20,19 @@
                 Me.Top += 200 'Moves the Window 10 units down.
         End Select
     End Sub
-  
+    Private Sub BtnDropFile_Drop(sender As Object, e As DragEventArgs)
+        Dim button As Button = CType(sender, Button)
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            ' Note that you can have more than one file.
+            Dim files() As String = DirectCast(e.Data.GetData(DataFormats.FileDrop), String())
+            If files IsNot Nothing AndAlso files.Length <> 0 Then
+                ' For this example, suppose we're only interested in the first file.
+                chosenText.Text=files(0)
+                button.Content=files(0)
+                ' MessageBox.Show("You dropped: " & files(0))
+            End If
+        End If
+    End Sub
 
     Private Sub ButtonClickHandler(sender As Object, e As RoutedEventArgs)
         Dim button As Button = CType(sender, Button)
