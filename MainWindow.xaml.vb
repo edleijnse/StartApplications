@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Text
 Imports IniParser
 Imports IniParser.Model
 
@@ -20,12 +21,25 @@ Public Class MainWindow
                 AssignContentToButtons(buttonSection)
             Else
                 MessageBox.Show($"File: {filePath} does not exist.")
+                ' Create file
+                ' Create a new file     
+                Using sw As StreamWriter = File.CreateText(filePath)
+                    ' Add some text to file
+                    sw.WriteLine("[Buttons]")
+                    sw.WriteLine("Button1 = DROP application here")
+                    sw.WriteLine("Button2 = DROP application here")
+                    sw.WriteLine("Button3 = DROP application here")
+                    sw.WriteLine("Button4 = DROP application here")
+                End Using
+                Dim data = parser.ReadFile(filePath)
+                Dim buttonSection = data("Buttons")
+                AssignContentToButtons(buttonSection)
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+   
     Private Sub AssignContentToButtons(buttonSection As KeyDataCollection)
         Button1.Content = Path.GetFileName(buttonSection("Button1"))
         Button2.Content = Path.GetFileName(buttonSection("Button2"))
