@@ -12,7 +12,7 @@ Public Class MainWindow
         LoadButtonContentsFromIniFile()
     End Sub
 
-    Private Sub LoadButtonContentsFromIniFile()
+    Public Sub LoadButtonContentsFromIniFile()
         Dim filePath As String = GetIniFilePath()
         Try
             If File.Exists(filePath) Then
@@ -39,15 +39,26 @@ Public Class MainWindow
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-   
-    Private Sub AssignContentToButtons(buttonSection As KeyDataCollection)
+    Public Function GetButton1Content() As String
+        Return Button1.Content.ToString()
+    End Function
+    Public Function GetButton2Content() As String
+        Return Button2.Content.ToString()
+    End Function
+    Public Function GetButton3Content() As String
+        Return Button3.Content.ToString()
+    End Function
+    Public Function GetButton4Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Sub AssignContentToButtons(buttonSection As KeyDataCollection)
         Button1.Content = Path.GetFileName(buttonSection("Button1"))
         Button2.Content = Path.GetFileName(buttonSection("Button2"))
         Button3.Content = Path.GetFileName(buttonSection("Button3"))
         Button4.Content = Path.GetFileName(buttonSection("Button4"))
     End Sub
 
-    Private Function GetIniFilePath() As String
+    Public Function GetIniFilePath() As String
         Dim rootPath As String = New DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName
         Return Path.Combine(rootPath, "startapplications.ini")
     End Function
