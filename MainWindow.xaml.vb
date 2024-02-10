@@ -51,11 +51,75 @@ Public Class MainWindow
     Public Function GetButton4Content() As String
         Return Button4.Content.ToString()
     End Function
+    Public Function GetButton5Content() As String
+        Return Button1.Content.ToString()
+    End Function
+    Public Function GetButton6Content() As String
+        Return Button2.Content.ToString()
+    End Function
+    Public Function GetButton7Content() As String
+        Return Button3.Content.ToString()
+    End Function
+    Public Function GetButton8Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton9Content() As String
+        Return Button1.Content.ToString()
+    End Function
+    Public Function GetButton10Content() As String
+        Return Button2.Content.ToString()
+    End Function
+    Public Function GetButton11Content() As String
+        Return Button3.Content.ToString()
+    End Function
+    Public Function GetButton12Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton13Content() As String
+        Return Button1.Content.ToString()
+    End Function
+    Public Function GetButton14Content() As String
+        Return Button2.Content.ToString()
+    End Function
+    Public Function GetButton15Content() As String
+        Return Button3.Content.ToString()
+    End Function
+    Public Function GetButton16Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton17Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton18Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton19Content() As String
+        Return Button4.Content.ToString()
+    End Function
+    Public Function GetButton20Content() As String
+        Return Button4.Content.ToString()
+    End Function
     Public Sub AssignContentToButtons(buttonSection As KeyDataCollection)
         Button1.Content = Path.GetFileName(buttonSection("Button1"))
         Button2.Content = Path.GetFileName(buttonSection("Button2"))
         Button3.Content = Path.GetFileName(buttonSection("Button3"))
         Button4.Content = Path.GetFileName(buttonSection("Button4"))
+        Button5.Content = Path.GetFileName(buttonSection("Button5"))
+        Button6.Content = Path.GetFileName(buttonSection("Button6"))
+        Button7.Content = Path.GetFileName(buttonSection("Button7"))
+        Button8.Content = Path.GetFileName(buttonSection("Button8"))
+        Button9.Content = Path.GetFileName(buttonSection("Button9"))
+        Button10.Content = Path.GetFileName(buttonSection("Button10"))
+        Button11.Content = Path.GetFileName(buttonSection("Button11"))
+        Button12.Content = Path.GetFileName(buttonSection("Button12"))
+        Button13.Content = Path.GetFileName(buttonSection("Button13"))
+        Button14.Content = Path.GetFileName(buttonSection("Button14"))
+        Button15.Content = Path.GetFileName(buttonSection("Button15"))
+        Button16.Content = Path.GetFileName(buttonSection("Button16"))
+        Button17.Content = Path.GetFileName(buttonSection("Button17"))
+        Button18.Content = Path.GetFileName(buttonSection("Button18"))
+        Button19.Content = Path.GetFileName(buttonSection("Button19"))
+        Button20.Content = Path.GetFileName(buttonSection("Button20"))
     End Sub
 
     Public Function GetIniFilePath() As String
